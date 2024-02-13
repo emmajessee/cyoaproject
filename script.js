@@ -1,0 +1,66 @@
+const start = 'The Lost Princess has gone missing! We have to find her! The King will reward with a hefty amount of coins.'; 
+
+const enter = 'Please select 1 or 2 by typing it into the box below';
+
+const q1 = 'Where should we look first? The swamp or in the town? Enter 1 for the swamp, 2 for the town.'
+
+const q2 = 'You arrive at the swamp, looking around you see a witches hut and a cave nestled into the side of a hill near the swamp. Where do you go? Enter 1 for the cave or 2 for the hut.';
+
+const q3 = 'Entering the cave, you notice what looks like to be muddy footprints heading further down. Do you follow them? Enter 1 for yes or 2 for no.'
+
+const q4 = 'Continuing down into the cave, two paths diverge infront of you. Which way do you go? 1 for left 2 for right.'
+
+const q5 = 'Good choice! You continue down the path to find the princess locked in a cage! It looks like the beast has captured her! Should you try to fight the beast or sneak around and save her? Enter 1 to fight or 2 to sneak around.'
+
+const q6 = 'You sneak around the beast and manage to reach the cage. You release the princess. Congrats you win!!!'
+
+const go1 = 'On the way to the town, you were ran over by a carriage. Game over!'; 
+
+const go2 = 'Oh no! The witch is inside. She captures you inside her hut forever. Game over!'
+
+const go3 ='A giant bat flys from the top of the cave and grabs you! Should have moved! Game over!';
+
+const go4 = 'Bad choice, you fell into a giant pit. Game over!'
+
+const go5 = 'The beast is too strong for you to fight against. Game over!'
+
+//
+
+alert(start);
+
+let userInput = prompt(q1);
+
+if (userInput == 1){
+  userInput = prompt(q2);
+
+  
+  if (userInput == 1){
+    userInput = prompt(q3);
+
+    if (userInput == 1){
+      userInput = prompt(q4);
+
+      if (userInput == 1){
+        userInput = prompt(q5);
+
+        if (userInput == 2){
+          alert(q6);
+        } else {
+          alert(go5);
+        }
+
+      } else {
+        alert(go4);
+      }
+
+    } else {
+      alert(go3);
+    }
+
+  } else {
+    alert(go2);
+  }
+
+} else {
+  alert(go1);
+}
